@@ -14,13 +14,15 @@
 import com.cra.figaro.language._
 import com.cra.figaro.algorithm.sampling._
 
-object SelectTest {
-	def main(args: Array[String]) {
-		val test = Select(0.8->"Hello", 0.2->"Goodbye")
+object SelectTest
+{
+  def main(args: Array[String])
+	{
+    val test = Select(0.8 -> "Hello", 0.2 -> "Goodbye")
 
-		val algorithm = Importance(1000, test)
-		algorithm.start()
+    val algorithm = Importance(1000, test)
+    algorithm.start()
 
-		println(algorithm.probability(test, "Hello"))
-	}
+    println(algorithm.probability(test, "Hello"))
+  }
 }
